@@ -32,10 +32,8 @@ pipeline{
         }
         stage("Deploy"){
             steps{
-                
-                    sh "sed -i 's|replace|${IMAGE_NAME}|g' deploy.yaml"
-                    sh "kubectl apply -f deploy.yaml"
-            
+                sh "sed -i 's|replace|${IMAGE_NAME}|g' deploy.yaml"
+                sh "kubectl apply -f deploy.yaml"
             }
         }
     }
