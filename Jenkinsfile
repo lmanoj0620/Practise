@@ -1,7 +1,7 @@
 pipeline{
     agent any
     environment {
-        IMAGE_NAME = "lmanoj0620/manojbala:${COMMIT_ID}"
+        IMAGE_NAME = "lmanojbalaji/manojbala:${COMMIT_ID}"
 
     }
     stages{
