@@ -1,4 +1,4 @@
-FROM python:slim
+FROM python:3.12 as builder
 WORKDIR /app
 
 RUN apt-get update && apt-get install -y \
@@ -10,8 +10,11 @@ RUN apt-get update && apt-get install -y \
 
 
 
+COPY requirements.txt .
+RUN pip install -r requirements.txt
+FROM python:3.12-slim from builder
+
 COPY . /app
-RUN pip install --no-cache-dir -r requirements.txt
 EXPOSE 8051
 
 
