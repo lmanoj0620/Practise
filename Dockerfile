@@ -11,11 +11,13 @@ RUN apt-get update && apt-get install -y \
 
 
 COPY requirements.txt .
+RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
-FROM python:3.12-slim from builder
+FROM python:3.12-slim
+COPY from=builder /install /usr/local
 
 COPY . /app
 EXPOSE 8051
 
 
-CMD ["steamlit", "run", "app.py","", "--server.port=8051", "--server.address=0.0.0.0"]
+CMD ["streamlit", "run", "app.py","", "--server.port=8051", "--server.address=0.0.0.0"]
