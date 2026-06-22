@@ -13,7 +13,7 @@ pipeline{
         stage("Build Docker Image"){
             steps{
                 sh """
-                docker rmi $(docker images)
+                
                 docker build -t ${IMAGE_NAME} .
                 """
             }
