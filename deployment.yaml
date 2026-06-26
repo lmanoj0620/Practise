@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: my-container
-          image: lmanojbalaji/manojbala:latest
+          image: lmanojbalaji/manojbala:v2
           imagePullPolicy: Always
           ports:
             - containerPort: 80
