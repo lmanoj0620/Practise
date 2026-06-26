@@ -1,4 +1,4 @@
-From nginx:latest
+FROM nginx:latest
 WORKDIR /app
 RUN apt update && \
     apt install -y
