@@ -2,7 +2,7 @@ pipeline{
     agent any
 
     environment{
-        Image_Name = "lmanojbalaji/manojbala:latest"
+        Image_Name = "lmanojbalaji/manojbala:${BUILD_NUMBER}"
     }
     stages{
         stage("Git chekout"){
