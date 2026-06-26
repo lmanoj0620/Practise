@@ -12,7 +12,7 @@ pipeline{
         }
         stage("Build Docker image"){
             steps{
-                sh " docker build -t $(Image_Name) ."
+                sh " docker build -t $Image_Name ."
             }
         }
         stage("Docker Login"){
@@ -24,7 +24,7 @@ pipeline{
         }
         stage("Push image to docker hub"){
             steps{
-                sh "docker push $(Image_Name)"
+                sh "docker push $Image_Name"
             }
         }
         stage("Deploy to Microk8s"){
