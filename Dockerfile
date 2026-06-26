@@ -1,5 +1,5 @@
 FROM nginx:latest
-WORKDIR /app
+
 RUN apt update && \
     apt install -y
 COPY index.html /usr/share/nginx/html/index.html
