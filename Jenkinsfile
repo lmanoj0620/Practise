@@ -1,7 +1,7 @@
 pipeline{
     agent any
 
-    envirmonment{
+    environment{
         Image_Name="lmanojbalaji/manojbala:latest"
     }
     stages{
