@@ -29,7 +29,7 @@ pipeline{
         }
         stage("Deploy to Microk8s"){
             steps{
-                sh "kubectl apply -f deployment.yaml"
+                sh "microk8s.kubectl apply -f deployment.yaml"
             }
         }
     }
